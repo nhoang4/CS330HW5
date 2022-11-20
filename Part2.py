@@ -1,27 +1,37 @@
-from Part1 import singularChecker
+
 from random import randrange
 import time
 
-code = ''
-isTrue = True
-count = 0
+def singularChecker(inputStr):
+    lockCode = '900944'
+    unlockCode = '900941'
 
-startTime = time.time()
+    for i in range(len(inputStr)):
+        if inputStr[i] == lockCode[0]:
+            nextNinput = inputStr[i:i + (len(lockCode))]
 
-while isTrue:
-    code += str(randrange(10))
-    count += 1
+            if nextNinput == lockCode:
+                return ['Lock', lockCode]
+            elif nextNinput == unlockCode:
+                return ['Unlock', unlockCode]
 
-    checkResult = singularChecker(code)
+if __name__ == '__main__':
+    code = ''
+    isTrue = True
+    startTime = time.time()
 
-    if checkResult is not None:
-        if checkResult[0] == 'Unlock':
-            print(f'Unlock took: {round(time.time() - startTime)}')
-            print(f'Unlock code: {checkResult[1]}')
-            print(f'N symbols generated: {len(code)}')
-            break
-        elif checkResult[0] == 'Lock':
-            print(f'Lock took: {round(time.time() - startTime)}')
-            print(f'Lock code: {checkResult[1]}')
-            print(f'N symbols generated: {len(code)}')
-            break
+    while isTrue:
+        code += str(randrange(10))
+        checkResult = singularChecker(code)
+
+        if checkResult is not None:
+            if checkResult[0] == 'Unlock':
+                print(f'Unlock took: {round(time.time() - startTime)}')
+                print(f'Unlock code: {checkResult[1]}')
+                print(f'N symbols generated: {len(code)}')
+                break
+            elif checkResult[0] == 'Lock':
+                print(f'Lock took: {round(time.time() - startTime)}')
+                print(f'Lock code: {checkResult[1]}')
+                print(f'N symbols generated: {len(code)}')
+                break
