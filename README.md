@@ -24,7 +24,8 @@ __This project was built using__ [CS330_Programming_Project](http://www.cs.iit.e
           python3 Part1.py
           python3 Part2.py
 
-There are 2 test cases:
+There are multiple test cases:
 1. Engine remains Locked after a Code input - Test Case #1
 2. Engine Unlocked and trigger *'Door Unlocked'* after Code Input - Test Case #2
+3. Engine Locked and Unlocked after one string passed - Test case #3
 
