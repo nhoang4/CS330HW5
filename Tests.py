@@ -22,5 +22,8 @@ class TestStringMethods(unittest.TestCase):
     def testCase3(self):
         self.assertEqual(keyController('900941909240859489009339328059284900944835701495900941'), 'Unlock')
 
+    def testCase4(self):
+        self.assertEqual(keyController(''), '')
+
 if __name__ == '__main__':
     unittest.main()
