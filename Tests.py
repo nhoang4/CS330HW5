@@ -1,29 +1,38 @@
-# import unittest
-from Part1 import keyController
-#
-#
-# class MyTestCase(unittest.TestCase):
-#     def TestCase1(self)
-#         self.assertEqual(keyController('900941'), 'Unlocked at position: 1' + '\n' + 'Door Unlocked')
-#
-# if __name__ == '__main__':
-#     unittest.main()
-
+import Part2
 import unittest
+lockCode = '900944'
+unlockCode = '900941'
 
 class TestStringMethods(unittest.TestCase):
-
     def testCase1(self):
-        self.assertEqual(keyController('900941'), 'Unlock')
+        device = Part2.LockEngineTester()
+        for i in range(len(lockCode)):
+            if i == len(lockCode) - 1:
+                self.assertEqual(device.padLock(lockCode[i]), 'Locked')
+            else:
+                device.padLock(lockCode[i])
 
     def testCase2(self):
-        self.assertEqual(keyController('900944'), 'Lock')
+        device = Part2.LockEngineTester()
+        for i in range(len(unlockCode)):
+            if i == len(unlockCode) - 1:
+                self.assertEqual(device.padLock(unlockCode[i]), 'Unlocked')
+            else:
+                device.padLock(unlockCode[i])
 
     def testCase3(self):
-        self.assertEqual(keyController('900941909240859489009339328059284900944835701495900941'), 'Unlock')
+        randomCode = '1245668g900944'
+        device = Part2.LockEngineTester()
+        for i in range(len(randomCode)):
+            if i == len(randomCode) - 1:
+                self.assertEqual(device.padLock(randomCode[i]), 'Locked')
+            else:
+                device.padLock(randomCode[i])
 
     def testCase4(self):
-        self.assertEqual(keyController(''), '')
+        emptyCode = ''
+        device = Part2.LockEngineTester()
+        self.assertEqual(device.padLock(emptyCode), None)
 
 if __name__ == '__main__':
     unittest.main()
