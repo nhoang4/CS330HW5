@@ -1,5 +1,7 @@
 import random
 class LockEngine:
+    #unlockCode = 900941
+    #lockCode = 900944
     def __init__(self):
         self.state = 0
         self.LOCK_STATE = 7
@@ -10,6 +12,7 @@ class LockEngine:
             print('Locked')
         elif self.state== self.UNLOCK_STATE:
             print('Unlocked')
+
     def padLock(self, input):
         try:
             input = int(input)

@@ -12,11 +12,11 @@ __This project is built in Python using__ [CS330_Programming_Project](http://www
 **Main** replicates that of a controller engine (an infinite loop and will return the Lock's 'engine state' encountering a correct code).
 
 ### Part 2: 
-- ***LockEngineTester*** does the same thing that the predecessor ***LockEngine*** does but returns instead of printing, it simply just return the Lock's state once find the Unlock or Lock Code. 
+- ***LockEngineTester*** does the same thing that the predecessor ***LockEngine*** does but returns instead of printing the Lock's state once find the Unlock or Lock Code. 
 
 **Main** simulates a lock-cracker. It will try to crack the code and return the minimum and the maximum symbols generated as well as average cumulated symbols.  
 ```
-  Note: The runtime for this implementation was way than anticipated (10~30s) 
+  Note: The runtime for this implementation was way faster than anticipated(10~30s).
         The best record I gathered was 5 seconds to find the Unlocking key.
 ```
  
