@@ -37,15 +37,3 @@ There are multiple test cases:
 3. Engine stayed operational even after wrong input - Test case #3
 4. Engine does not interact at all (passing in an empty string) - Test case #4
 
-***
-### MEMO:
-
- A memo describing what you have done, how you have done it, and your findings. 
- In the memo clearly state what is the language of the FA you have implemented. 
- Also indicate what is the regular expression corresponding to that language. 
- Attach the state transition diagram for the FA.
-
-In this project, I have managed to successfully created a functional lock that will print out the state of the door as the code or password are being passed in. As the instruction said, I created two file Part1.py and Part2.py. The first one is to show the mechanism of a lock engine. The second file is used to crack the lock and also returns a average symbols produced while trying to unlock the engine as well as the minimum and the maximum symbols generated.
-
-The language I applied for this project was in Python. Attached with this file is a FA state transition diagram. 
-
