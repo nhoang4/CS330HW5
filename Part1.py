@@ -7,7 +7,7 @@ class LockEngine:
         self.LOCK_STATE = 7
         self.UNLOCK_STATE = 6
 
-    def printer(self):
+    def toString(self):
         if self.state== self.LOCK_STATE:
             print('Locked')
         elif self.state== self.UNLOCK_STATE:
@@ -60,11 +60,11 @@ class LockEngine:
             elif self.state == 5:
                 if input == 1:
                     self.state = self.UNLOCK_STATE
-                    self.printer()
+                    self.toString()
 
                 elif input == 4:
                     self.state = self.LOCK_STATE
-                    self.printer()
+                    self.toString()
 
                 elif input == 9:
                     self.state = 1
@@ -75,7 +75,6 @@ class LockEngine:
                 if input == 9:
                     self.state = 1
                 else:
-
                     self.state = 0
         except:
             self.state = 0

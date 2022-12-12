@@ -4,8 +4,6 @@ class LockEngineTester:
         self.state = 0
         self.LOCK_STATE = 7
         self.UNLOCK_STATE = 6
-
-
     def padLock(self, input):
         try:
             input = int(input)
