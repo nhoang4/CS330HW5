@@ -14,6 +14,7 @@ class LockEngine:
             print('Unlocked')
 
     def padLock(self, input):
+
         try:
             input = int(input)
             if input < 0:
@@ -82,6 +83,7 @@ class LockEngine:
 
 if __name__ == '__main__':
     device = LockEngine()
+    print('\nEnter Your Password:')
     while True:
         INP = input()
         device.padLock(INP)
